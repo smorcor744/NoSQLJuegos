@@ -8,9 +8,9 @@ object ConexionBD{
     // guardo en una variable la url de conexión
     private val urlConnectionMongo: String = dotenv["URL_MONGODB"]
     // podemos realizar la conexion por el CRUD
-    private val cluster = MongoClients.create(urlConnectionMongo)
+    val cluster = MongoClients.create(urlConnectionMongo)
 
     // 2º Nos conectamos a las base de datos
-    val bd = cluster.getDatabase("adaprueba")
+    val bd = cluster.getDatabase("Sergio")
 
 }
